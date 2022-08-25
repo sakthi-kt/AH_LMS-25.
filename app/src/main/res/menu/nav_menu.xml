@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_apply"
+            android:title="Apply Leave"
+            android:icon="@drawable/ic_baseline_send_24"
+            />
+        <item
+            android:id="@+id/nav_myleaves"
+            android:title="My Leave"
+            android:icon="@drawable/ic_baseline_access_time_filled_24"/>
+        <item
+            android:id="@+id/nav_request"
+            android:title="Leave Request"
+            android:icon="@drawable/ic_baseline_alternate_email_24"/>
+        <item
+            android:id="@+id/ahfamily"
+            android:title="Augusta Family"
+            android:icon="@drawable/ic_baseline_group_24"/>
+        <item
+            android:id="@+id/holidays"
+            android:title="Augusta Holidays"
+            android:icon="@drawable/ic_baseline_home_repair_service_24"/>
+        <item
+            android:id="@+id/profile"
+            android:title="My Profile"
+            android:icon="@drawable/ic_baseline_account_box_24"/>
+        <item
+            android:id="@+id/password"
+            android:title="Change Password"
+            android:icon="@drawable/ic_baseline_vpn_key_24"/>
+        <item
+            android:id="@+id/logout"
+            android:title="Log Out"
+            android:icon="@drawable/ic_baseline_arrow_back_24"/>
+    </group>
+</menu>
