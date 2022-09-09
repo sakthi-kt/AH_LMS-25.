@@ -1,10 +1,11 @@
-package com.example.ah_lms
+package com.example.ah_lms.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.ah_lms.R
 
 
 class LogoutFragment : Fragment() {

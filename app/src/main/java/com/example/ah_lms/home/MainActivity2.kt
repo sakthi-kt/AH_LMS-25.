@@ -1,4 +1,4 @@
-package com.example.ah_lms
+package com.example.ah_lms.home
 
 import android.os.Bundle
 import android.view.MenuItem
@@ -6,6 +6,8 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
+import com.example.ah_lms.R
+import com.example.ah_lms.fragments.*
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity2 : AppCompatActivity() {
@@ -20,7 +22,7 @@ class MainActivity2 : AppCompatActivity() {
         drawerLayout = findViewById(R.id.drawerLayout)
         val navView:NavigationView = findViewById(R.id.navigation_view)
 
-        toggle = ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close)
+        toggle = ActionBarDrawerToggle(this,drawerLayout, R.string.open, R.string.close)
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
