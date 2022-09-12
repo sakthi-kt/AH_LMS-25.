@@ -4,12 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.AhFamilyFragment">
+    tools:context=".detailedactivity.FamilyDetailedActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_margin="2dp"
-        android:id="@+id/ahFamilyRecycler"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:listitem="@layout/ahfamily_cardlayout"/>
+    
+
 </androidx.constraintlayout.widget.ConstraintLayout>

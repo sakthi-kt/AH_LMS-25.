@@ -9,6 +9,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AH_LMS">
         <activity
+            android:name=".detailedactivity.FamilyDetailedActivity"
+            android:exported="false" />
+        <activity
             android:name=".detailedactivity.myLeaveDeatailedActivity"
             android:exported="false" />
         <activity

@@ -1,21 +1,23 @@
 package com.example.ah_lms.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ah_lms.R
 import com.example.ah_lms.adapter.MyLeaveAdapter
 import com.example.ah_lms.dataclass.myLeave
+import com.example.ah_lms.detailedactivity.myLeaveDeatailedActivity
 
 
 class MyLeaveFragment : Fragment() {
     lateinit var newRecyclerView: RecyclerView
     lateinit var newLeaveList: ArrayList<myLeave>
-
     lateinit var profileImage:Array<Int>
     lateinit var heading:Array<String>
 
@@ -67,7 +69,16 @@ class MyLeaveFragment : Fragment() {
             val leaves = myLeave(profileImage[i],heading[i])
             newLeaveList.add(leaves)
         }
-        newRecyclerView.adapter = MyLeaveAdapter(newLeaveList)
+        var adapter = MyLeaveAdapter(newLeaveList)
+        newRecyclerView.adapter = adapter
+        adapter.setOnItemClickListener(object :MyLeaveAdapter.onItemClickListener{
+            override fun onItemClick(position: Int) {
+               val nav = Intent(requireContext(),myLeaveDeatailedActivity::class.java)
+                startActivity(nav)
+
+            }
+
+        })
     }
 
 

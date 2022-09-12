@@ -28,9 +28,9 @@ class MainActivity2 : AppCompatActivity() {
 
          supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-         navView.setNavigationItemSelectedListener {
+        navView.setNavigationItemSelectedListener {
 
-          it.isChecked = true
+         // it.isChecked = true
 
              when(it.itemId)
             {
@@ -44,6 +44,7 @@ class MainActivity2 : AppCompatActivity() {
             }
             true
         }
+
     }
     private fun replaceFragment(fragment:Fragment,title:String){
         val fragmentManager = supportFragmentManager

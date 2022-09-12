@@ -11,10 +11,18 @@ import android.widget.ImageView
 
 class MyLeaveAdapter(private val leaveList:List<myLeave>):RecyclerView.Adapter<MyLeaveAdapter.ViewHolder>(){
 
+    private lateinit var mListener: onItemClickListener
+    interface onItemClickListener{
+        fun onItemClick(position: Int)
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.leavehistotycardlayout,parent,false)
-        return ViewHolder(itemView)
+        return ViewHolder(itemView,mListener)
 
+    }
+    fun setOnItemClickListener(listener: onItemClickListener){
+        mListener = listener
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -34,7 +42,7 @@ class MyLeaveAdapter(private val leaveList:List<myLeave>):RecyclerView.Adapter<M
 
 
 
-    class ViewHolder (itemView: View):RecyclerView.ViewHolder(itemView){
+    class ViewHolder (itemView: View,listener: onItemClickListener):RecyclerView.ViewHolder(itemView){
 
         val profilImage:ImageView = itemView.findViewById(R.id.item_image)
         val heading:TextView = itemView.findViewById(R.id.item_title)
@@ -44,6 +52,10 @@ class MyLeaveAdapter(private val leaveList:List<myLeave>):RecyclerView.Adapter<M
         val leaveDay :TextView = itemView.findViewById(R.id.dayCount)*/
 
 
-
+        init {
+            itemView.setOnClickListener {
+                listener.onItemClick(adapterPosition)
+            }
+        }
     }
 }
