@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.MyLeaveFragment">
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
 
         <TextView
             android:id="@+id/heading"
@@ -17,18 +15,22 @@
             android:text="Leave Histroy"
             android:textSize="25sp"
             android:textStyle="bold"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:gravity="center"
             tools:ignore="HardcodedText" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/heading"
-            android:background="@color/underline"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/leave_recyc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heading"
+        tools:listitem="@layout/leavehistotycardlayout" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</FrameLayout>
