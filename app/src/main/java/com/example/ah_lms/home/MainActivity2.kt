@@ -1,13 +1,17 @@
 package com.example.ah_lms.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.example.ah_lms.R
 import com.example.ah_lms.fragments.*
+import com.example.ah_lms.login.MainActivity
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity2 : AppCompatActivity() {
@@ -41,6 +45,23 @@ class MainActivity2 : AppCompatActivity() {
                 R.id.holidays -> replaceFragment(AhHolidaysFragment(),it.title.toString())
                 R.id.profile -> replaceFragment(ProfileFragment(),it.title.toString())
                 R.id.password -> replaceFragment(PasswordFragment(),it.title.toString())
+                R.id.logout -> {
+                    val eBuilder = AlertDialog.Builder(this)
+                    eBuilder.setTitle("Logout")
+                    eBuilder.setMessage("Are you sure want to log out? ")
+                    eBuilder.setPositiveButton("Yes"){
+                            Dialog,which->
+                        val intent = Intent(this@MainActivity2, MainActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                        Toast.makeText(this,"Logged Out", Toast.LENGTH_SHORT).show()
+                    }
+                    eBuilder.setNegativeButton("No"){
+                            Dialog,which->
+                    }
+                    val createBuild: AlertDialog = eBuilder.create()
+                    createBuild.show()
+                }
             }
             true
         }

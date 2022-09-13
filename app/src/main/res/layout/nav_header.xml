@@ -21,7 +21,8 @@
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
         android:text="Hi, Sakthivel Karunanithi"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:textColor="@color/black"/>
 
     <View
         android:layout_width="match_parent"

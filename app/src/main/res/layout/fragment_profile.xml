@@ -1,192 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileFragment">
+    android:orientation="vertical">
 
- <androidx.constraintlayout.widget.ConstraintLayout
-     android:layout_width="match_parent"
-     android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp">
 
-     <TextView
-         android:id="@+id/protv1"
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:layout_marginLeft="40dp"
-         android:text="My Profile"
-         android:textSize="35sp"
-         android:textStyle="bold"
-         android:textColor="@color/black"
-         app:layout_constraintEnd_toEndOf="parent"
-         app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintTop_toTopOf="parent"
-         android:layout_marginTop="25dp"/>
-     <View
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:id="@+id/fv"
-         android:layout_marginTop="10dp"
-         app:layout_constraintTop_toBottomOf="@+id/protv1"
-         android:background="@color/ic_launcher_ahlms_background"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@color/ah"
+            android:orientation="vertical">
 
-     <TextView
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:text="Basic Info"
-         android:layout_marginTop="15dp"
-         android:textStyle="bold"
-         android:textSize="15dp"
-         android:layout_marginLeft="25dp"
-         app:layout_constraintTop_toTopOf="@+id/fv" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="35dp"
+                android:foregroundGravity="center_horizontal"
+                app:cardCornerRadius="100dp">
 
-     <TextView
-         android:id="@+id/ftv2"
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:text="Sakthivel Karunanithi"
-         android:textColor="@color/black"
-         android:textStyle="bold"
-         android:textSize="25sp"
-         app:layout_constraintTop_toTopOf="@+id/fv"
-         android:layout_marginLeft="15dp"
-         android:layout_marginTop="45dp"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/profile" />
 
-     <de.hdodenhof.circleimageview.CircleImageView
-         android:id="@+id/profile_pic"
-         android:layout_marginTop="25dp"
-         android:layout_width="100dp"
-         android:layout_height="100dp"
-         android:src="@drawable/profile"
-         app:layout_constraintEnd_toEndOf="parent"
-         app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintTop_toBottomOf="@+id/ftv2" />
-     <TextView
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:id="@+id/emp_id"
-         android:layout_marginLeft="15dp"
-         android:textColor="@color/black"
-         android:textStyle="bold"
-         android:textSize="15sp"
-         app:layout_constraintTop_toBottomOf="@+id/profile_pic"
-         android:text="Employee ID"/>
-     <TextView
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:id="@+id/emp_id_num"
-         android:layout_marginTop="10dp"
-         android:layout_marginLeft="25dp"
-         android:textStyle="bold"
-         android:textSize="15sp"
-         app:layout_constraintTop_toBottomOf="@+id/emp_id"
-         android:text=" INT087CBE"/>
-     <TextView
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:id="@+id/email"
-         android:layout_marginLeft="15dp"
-         android:textColor="@color/black"
-         android:layout_marginTop="25dp"
-         android:textStyle="bold"
-         android:textSize="15sp"
-         app:layout_constraintTop_toBottomOf="@+id/emp_id_num"
-         android:text="Email Address"/>
-     <TextView
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:id="@+id/mail_id"
-         android:layout_marginTop="10dp"
-         android:layout_marginLeft="25dp"
-         android:textStyle="bold"
-         android:textSize="15sp"
-         app:layout_constraintTop_toBottomOf="@+id/email"
-         android:text=" sakthivel.kaunanithi@augustahitech.com"/>
-     <TextView
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:id="@+id/team"
-         android:layout_marginLeft="15dp"
-         android:textColor="@color/black"
-         android:layout_marginTop="25dp"
-         android:textStyle="bold"
-         android:textSize="15sp"
-         app:layout_constraintTop_toBottomOf="@+id/mail_id"
-         android:text="Team"/>
-     <TextView
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:id="@+id/team_id"
-         android:layout_marginLeft="25dp"
-         android:layout_marginTop="10dp"
-         android:textStyle="bold"
-         android:textSize="15sp"
-         app:layout_constraintTop_toBottomOf="@+id/team"
-         android:text="Android"/>
-     <TextView
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:id="@+id/lb"
-         android:layout_marginLeft="15dp"
-         android:textColor="@color/black"
-         android:layout_marginTop="25dp"
-         android:textStyle="bold"
-         android:textSize="15sp"
-         app:layout_constraintTop_toBottomOf="@+id/team_id"
-         android:text="Leave Balance "/>
-     <TextView
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:id="@+id/lb_id"
-         android:layout_marginLeft="25dp"
-         android:layout_marginTop="10dp"
-         android:textStyle="bold"
-         android:textSize="15sp"
-         app:layout_constraintTop_toBottomOf="@+id/lb"
-         android:text="0 days"/>
-     <TextView
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:id="@+id/role"
-         android:layout_marginLeft="15dp"
-         android:textColor="@color/black"
-         android:layout_marginTop="25dp"
-         android:textStyle="bold"
-         android:textSize="15sp"
-         app:layout_constraintTop_toBottomOf="@+id/lb_id"
-         android:text="Role "/>
-     <TextView
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:id="@+id/role_id"
-         android:layout_marginLeft="25dp"
-         android:textStyle="bold"
-         android:textSize="15sp"
-         android:layout_marginTop="10dp"
-         app:layout_constraintTop_toBottomOf="@+id/role"
-         android:text="Intern"/>
-     <TextView
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:id="@+id/desig"
-         android:layout_marginLeft="15dp"
-         android:textColor="@color/black"
-         android:layout_marginTop="25dp"
-         android:textStyle="bold"
-         android:textSize="15sp"
-         app:layout_constraintTop_toBottomOf="@+id/role_id"
-         android:text="Designation "/>
-     <TextView
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:id="@+id/desg_id"
-         android:layout_marginLeft="25dp"
-         android:textStyle="bold"
-         android:textSize="15sp"
-         android:layout_marginTop="10dp"
-         app:layout_constraintTop_toBottomOf="@+id/desig"
-         android:text="null"/>
- </androidx.constraintlayout.widget.ConstraintLayout>
 
-</FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="Sakthivel Karunanithi"
+                android:textColor="@color/white"
+                android:textSize="23dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:cardCornerRadius="15dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="3"
+                android:background="#F1F1F1"
+                android:elevation="35dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Employee Id"
+                        android:textSize="17dp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="INT087CBE"
+                        android:textColor="@color/ah"
+                        android:textStyle="bold"
+                       />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Team"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Android"
+                        android:textColor="@color/ah"
+                        android:textStyle="bold"
+                       />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Role"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Intern"
+                        android:textColor="@color/ah"
+                        android:textStyle="bold"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+<TextView
+    android:id="@+id/mailId"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="25dp"
+    android:layout_marginHorizontal="25dp"
+    android:text="Email Address"
+    android:textStyle="bold"
+    android:textSize="15sp"
+    android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/mailIdView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="25dp"
+        android:text="sakthivel.karunanithi@augustahitech.com"
+        android:textSize="15sp"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginHorizontal="25dp"
+        android:text="Phone Number"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/phoneNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="25dp"
+        android:text="6383511103"
+        android:textSize="15sp"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/doj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginHorizontal="25dp"
+        android:text="DOJ"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/dojView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="25dp"
+        android:text="15/12/2021"
+        android:textSize="15sp"
+        android:textColor="@color/black"/>
+</LinearLayout>
