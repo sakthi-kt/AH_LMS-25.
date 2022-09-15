@@ -9,6 +9,7 @@
         <entry key="app/src/main/res/drawable/ic_baseline_edit_calendar_24.xml" value="0.148" />
         <entry key="app/src/main/res/drawable/ic_baseline_group_24.xml" value="0.1835" />
         <entry key="app/src/main/res/drawable/ic_baseline_home_repair_service_24.xml" value="0.1835" />
+        <entry key="app/src/main/res/drawable/ic_baseline_send_24.xml" value="0.148" />
         <entry key="app/src/main/res/drawable/ic_baseline_vpn_key_24.xml" value="0.182" />
         <entry key="app/src/main/res/drawable/input_field.xml" value="0.1835" />
         <entry key="app/src/main/res/drawable/name.xml" value="0.1835" />
@@ -25,6 +26,7 @@
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.21" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.24166666666666667" />
         <entry key="app/src/main/res/layout/ahfamily_cardlayout.xml" value="0.23958333333333334" />
+        <entry key="app/src/main/res/layout/ahleave_cardlayout.xml" value="0.23958333333333334" />
         <entry key="app/src/main/res/layout/fragment_ah_family.xml" value="0.24166666666666667" />
         <entry key="app/src/main/res/layout/fragment_ah_holidays.xml" value="0.24166666666666667" />
         <entry key="app/src/main/res/layout/fragment_leave.xml" value="0.24166666666666667" />
